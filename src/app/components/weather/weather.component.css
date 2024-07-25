@@ -1,0 +1,34 @@
+.container {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input.form-control {
+    background-color: var(--input-background);
+    border: 1px solid var(--input-background);
+    border-radius: 5px;
+}
+
+button.btn {
+    border-radius: 5px;
+}
+
+.list-group-item {
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: var(--input-background);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .row {
+        margin: 0;
+    }
+}

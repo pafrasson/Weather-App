@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-12 mb-3">
+            <input type="text" class="form-control" placeholder="Digite o nome da cidade" [(ngModel)]="city" />
+            <button class="btn btn-primary mt-2 w-100" (click)="searchWeather()">Pesquisar</button>
+            <button class="btn btn-secondary mt-2 w-100" (click)="getCurrentLocationWeather()">Usar localização atual</button>
+        </div>
+    </div>
+
+    <div class="row mt-4" *ngIf="weatherData">
+        <div class="col-12">
+            <h3>Previsão do tempo para {{ weatherData.city.name }}</h3>
+            <div class="list-group">
+                <div *ngFor="let item of weatherData.list" class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <img [src]="'http://openweathermap.org/img/w/' + item.weather[0].icon + '.png'"
+                                alt="weather icon" class="mr-3">
+                            <strong>{{ item.dt_txt }}</strong>
+                        </div>
+                        <div>
+                            <p class="mb-0">{{ item.weather[0].description }}</p>
+                            <p class="mb-0">Min: {{ item.main.temp_min }}°C, Max: {{ item.main.temp_max }}°C</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

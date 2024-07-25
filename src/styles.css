@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #003975;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --card-background: #ffffff;
+    --input-background: #e9ecef;
+    --button-primary: #007bff;
+    --button-secondary: #2c3135;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.app-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.list-group-item {
+    background-color: var(--card-background);
+    border: 1px solid var(--input-background);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: var(--button-primary);
+    border-color: var(--button-primary);
+}
+
+.btn-secondary {
+    background-color: var(--button-secondary);
+    border-color: var(--button-secondary);
+}
